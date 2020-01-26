@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -o errexit
+set -o nounset
+set -o pipefail
+
+echo "=> Copyng sources ..."
+mv /tmp/src/* ./ 2>/dev/null || true
+
+echo "=> Building release ..."
+rebar3 as prod release
+
+echo "=> Creating release archive ..."
+cd _build/prod
+tar -cf /tmp/rel.tar rel
+
+echo "=> Build assemble complete"

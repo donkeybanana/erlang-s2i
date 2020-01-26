@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -o errexit
+set -o nounset
+set -o pipefail
+
+echo "=> Exporting build artifact(s)..."
+tar -xf rel.tar
+
+echo "=> Cleanup build artifact(s)..."
+rm -f rel.tar
+
+echo "=> Runtime assemble complete"

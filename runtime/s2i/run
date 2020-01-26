@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -e
+
+exec /opt/app-root/rel/$APP_NAME/bin/$APP_NAME foreground
