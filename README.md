@@ -43,3 +43,7 @@ $ s2i build docker-erlang-example/dockerwatch \ # local path as build input
             donkeybanana/erlang-dockerwatch # output image
 ```
 
+## Security
+
+- https://quay.io/repository/donkeybanana/s2i-erlang-builder?tab=tags
+- https://quay.io/repository/donkeybanana/s2i-erlang-runtime?tab=tags
